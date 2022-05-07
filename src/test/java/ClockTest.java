@@ -7,7 +7,7 @@ public class ClockTest{
     public void TestCases(){
         Clock c1= new Clock();
         assertEquals("2000-1-1",c1.clkFunctionalities("abadcaaaaa"));
-        assertEquals("2001-2-3",c1.clkFunctionalities("caaabbababa"));
-
+        //Test for all edges
+        assertEquals("1:1",c1.clkFunctionalities("aacbabababababada"));
     }
 }

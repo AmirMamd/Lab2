@@ -14,11 +14,15 @@ public class Clock {
                         if(State1.equals("Time")){
                             State1="Date";
                             DisplayDate(Y,M,D);
-                            return Y+"-"+M+"-"+D;
+                            if(i==arr.length-1){
+                                return h+":"+m;
+                            }
                         }else{
                             State1="Time";
                             DisplayTime(h,m);
-                            return h+":"+m;
+                            if(i==arr.length-1){
+                                return Y+"-"+M+"-"+D;
+                            }
                         }
                     }else if(arr[i].equals("b")){
                         State="Alarm";
